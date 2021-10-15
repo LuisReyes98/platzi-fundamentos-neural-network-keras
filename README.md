@@ -135,3 +135,24 @@ Tipos de funciones de activación:
   $$
 
 [Herramienta para la ciencia de datos y funciones de activación](https://www.wolframalpha.com/)
+
+## Función de pérdida (loss function)
+
+La función de pérdida es muy importante definirla
+
+Se encarga de decirnos si nuestro algoritmo esta prediciendo de una manera correcta, la función toma la prediccion y los valores reales y nos da un score en base a los resultados y asi saber que tan grande es el error de la prediccion
+
+- MSE - Mean Squared error (Error cuadratico Medio)
+  Eleva los valores al cuadrado para castigar por los valores que estan mas alejados
+  $$
+  \mathrm{MSE} = \frac{1}{n} \sum_{i=1}^{n}(Y_{i}-\hat{Y}_{i})^2
+  $$
+
+- Cross Entropy
+  Es muy bueno para valores categoricos o de clasificacion
+
+  Se encarga de medir la distancia entre la prediccion real y el valor de nuestro algoritmo
+
+  $$
+    -\sum_{x}p(x) \log{q(x)}
+  $$
