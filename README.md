@@ -156,3 +156,21 @@ Se encarga de decirnos si nuestro algoritmo esta prediciendo de una manera corre
   $$
     -\sum_{x}p(x) \log{q(x)}
   $$
+
+## Descenso del gradiente
+
+Con la derivada cuando la pendiente da 0 es porque se llego a un pico o a un valle, por lo cual de forma iterativa se busca optimizar la función para encontrar el menor valor de la funcion
+
+http://www.benfrederickson.com/numerical-optimization/
+
+https://www.desmos.com/calculator/l0puzw0zvm
+
+El learning Rate de una funcion dice que tantos pasos realiza la funcion para buscar su punto optimo, si el learning rate es muy bajo la funcion deja de ser eficiente y si el learning rate es muy alto la funcion falla en encontrar el valor minimo al pasar de largo por este punto y no tener la presicion suficiente como para alcanzarlo
+
+### Mínimos
+
+Si la funcion alcanza un minimo local pero este no es el minimo global, la funcion esta optmizada mas no optimizada al maximo
+
+para esto casos existen opmizadores como el **MSPro** el cual le agrega momento y comportamiento fisico a la funciones para evitar que se estanquen en un minimo local
+
+el descenso del gradiente se calcula tomando la funcion de perdida y se calculan sus derivadas parciales en un punto, luego este vector gradiente resultante nos indica hacia donde hay que ir para aumentar el valor al maximo por lo cual lo multiplicamos por -1 y al avanzar en la direccion opuesta realizamos el descenso mas rapido
