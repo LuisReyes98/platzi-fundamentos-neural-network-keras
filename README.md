@@ -174,3 +174,46 @@ Si la funcion alcanza un minimo local pero este no es el minimo global, la funci
 para esto casos existen opmizadores como el **MSPro** el cual le agrega momento y comportamiento fisico a la funciones para evitar que se estanquen en un minimo local
 
 el descenso del gradiente se calcula tomando la funcion de perdida y se calculan sus derivadas parciales en un punto, luego este vector gradiente resultante nos indica hacia donde hay que ir para aumentar el valor al maximo por lo cual lo multiplicamos por -1 y al avanzar en la direccion opuesta realizamos el descenso mas rapido
+
+[DotCSV Descenso del gradiente](https://www.youtube.com/watch?v=A6FiCDoz8_4)
+
+## Backpropagation
+
+Backpropagation, [teoría](https://www.youtube.com/watch?v=eNIqz_noix8)
+Backpropagation, [matemáticas](https://www.youtube.com/watch?v=M5QHwkkHgAA)
+
+Es el algoritmo que se encarga de distribuir el error calculado por la funcion de partidad a traves de toda la red neuronal, recorriendola red iniciando desde la capa final hasta la capa inicial de entrada.
+
+[backpropagation brilliant](https://brilliant.org/wiki/backpropagation/#)
+
+### Math
+
+For the partial derivatives,
+
+$$
+\frac{\partial E_d}{\partial w_{ij}^k} = \delta_j^k o_i^{k-1}.
+$$
+
+For the final layer's error term,
+
+$$
+\delta_1^m = g_o^{\prime}(a_1^m)\left(\hat{y_d}-y_d\right).
+$$
+
+For the hidden layers' error terms,
+
+$$
+\delta_j^k = g^{\prime}\big(a_j^k\big)\sum_{l=1}^{r^{k+1}}w_{jl}^{k+1}\delta_l^{k+1}.
+$$
+
+For combining the partial derivatives for each input-output pair,
+
+$$
+\frac{\partial E(X, \theta)}{\partial w_{ij}^k} = \frac{1}{N}\sum_{d=1}^N\frac{\partial}{\partial w_{ij}^k}\left(\frac{1}{2}\left(\hat{y_d} - y_d\right)^{2}\right) = \frac{1}{N}\sum_{d=1}^N\frac{\partial E_d}{\partial w_{ij}^k}.
+$$
+
+For updating the weights,
+
+$$
+\Delta w_{ij}^k = - \alpha \frac{\partial E(X, \theta)}{\partial w_{ij}^k}.
+$$
