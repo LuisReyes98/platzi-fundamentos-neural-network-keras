@@ -238,7 +238,6 @@ Podemos usar series de Tiempo
 
 Donde tenemos
 
-1. cantidad de ejemplos en 1 dimension
 2. caracteristica de esos ejemplos en otra dimension
 3. caractersisticas de esos ejemplos con respecto al tiempo en una tercera dimension
 
