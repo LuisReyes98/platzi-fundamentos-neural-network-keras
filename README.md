@@ -116,7 +116,7 @@ Tipos de funciones de activación:
    tanh ( x ) = sinh ( x ) cosh ( x ) = e 2 x − 1 e 2 x + 1 .
   $$
 
-- Función rectificada/ReLU
+- Función rectificada/ReLU (Rectified Linear Units)
   es de las funciones mas usadas actualmente
   puede derivarse
   $$
@@ -190,30 +190,61 @@ Es el algoritmo que se encarga de distribuir el error calculado por la funcion d
 
 For the partial derivatives,
 
-$$
-\frac{\partial E_d}{\partial w_{ij}^k} = \delta_j^k o_i^{k-1}.
-$$
+$$\frac{\partial E_d}{\partial w_{ij}^k} = \delta_j^k o_i^{k-1}.$$
 
 For the final layer's error term,
 
-$$
-\delta_1^m = g_o^{\prime}(a_1^m)\left(\hat{y_d}-y_d\right).
-$$
+$$\delta_1^m = g_o^{\prime}(a_1^m)\left(\hat{y_d}-y_d\right).$$
 
 For the hidden layers' error terms,
 
-$$
-\delta_j^k = g^{\prime}\big(a_j^k\big)\sum_{l=1}^{r^{k+1}}w_{jl}^{k+1}\delta_l^{k+1}.
-$$
+$$\delta_j^k = g^{\prime}\big(a_j^k\big)\sum_{l=1}^{r^{k+1}}w_{jl}^{k+1}\delta_l^{k+1}.$$
 
 For combining the partial derivatives for each input-output pair,
 
-$$
-\frac{\partial E(X, \theta)}{\partial w_{ij}^k} = \frac{1}{N}\sum_{d=1}^N\frac{\partial}{\partial w_{ij}^k}\left(\frac{1}{2}\left(\hat{y_d} - y_d\right)^{2}\right) = \frac{1}{N}\sum_{d=1}^N\frac{\partial E_d}{\partial w_{ij}^k}.
-$$
+$$\frac{\partial E(X, \theta)}{\partial w_{ij}^k} = \frac{1}{N}\sum_{d=1}^N\frac{\partial}{\partial w_{ij}^k}\left(\frac{1}{2}\left(\hat{y_d} - y_d\right)^{2}\right) = \frac{1}{N}\sum_{d=1}^N\frac{\partial E_d}{\partial w_{ij}^k}.$$
 
 For updating the weights,
 
-$$
-\Delta w_{ij}^k = - \alpha \frac{\partial E(X, \theta)}{\partial w_{ij}^k}.
-$$
+$$\Delta w_{ij}^k = - \alpha \frac{\partial E(X, \theta)}{\partial w_{ij}^k}.$$
+
+## Playground - Tensorflow
+
+[Playground de Tensorflow](https://playground.tensorflow.org/)
+
+[Espiral con relu](https://playground.tensorflow.org/#activation=relu&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=6,6,6,4&seed=0.76006&showTestData=false&discretize=true&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false)
+
+[Espiral con tangente hiperbolica](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=6,4,4&seed=0.82058&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=true&ySquared=true&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+
+[Dona sin neuronas](https://playground.tensorflow.org/#activation=sigmoid&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=&seed=0.20410&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=true&ySquared=true&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+
+## Dimensiones, tensores y reshape
+
+Tipos de datos por dimension
+
+- Scalar: dimension 0, ejemplo: `2`
+- Vector: dimension 1, ejemplo `[1,2,3]`
+- Matrix: dimension 2 , ejemplo `[[1,2],[3,4]]`
+- Tensores: 3 Dimensiones o N dimensiones, ejemplo
+  `[[[1,2],[4,5]],[[1,2],[4,5]]]`
+
+### Matrix 2D
+
+Matriz, dataframe de filas y columnas
+
+### Tensor 3D
+
+Podemos usar series de Tiempo
+
+Donde tenemos
+
+1. cantidad de ejemplos en 1 dimension
+2. caracteristica de esos ejemplos en otra dimension
+3. caractersisticas de esos ejemplos con respecto al tiempo en una tercera dimension
+
+### Tensor 4D Images
+
+1. Ancho
+2. Alto
+3. Canales de Colores (RGB)
+4. Cantidad de Ejemplos
