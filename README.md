@@ -248,3 +248,11 @@ Donde tenemos
 2. Alto
 3. Canales de Colores (RGB)
 4. Cantidad de Ejemplos
+
+## Entrenamiento forward de la red neuronal
+
+https://machinelearningknowledge.ai/
+
+https://machinelearningknowledge.ai/wp-content/uploads/2019/06/Artificial-Neuron-Working.gif
+
+## Aplicando backpropagation y descenso del gradiente
