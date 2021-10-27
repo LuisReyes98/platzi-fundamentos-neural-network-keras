@@ -1,0 +1,9 @@
+epoch 150000
+
+learning rate = 0.00001
+
+0.026289680287669263
+Min error
+0.026289680287669263
+Min error epoch
+149975
