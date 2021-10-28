@@ -256,3 +256,43 @@ https://machinelearningknowledge.ai/
 https://machinelearningknowledge.ai/wp-content/uploads/2019/06/Artificial-Neuron-Working.gif
 
 ## Aplicando backpropagation y descenso del gradiente
+
+## Data: train, validation, test
+
+### Manejo de datos
+
+Aunque comumente se dividen los datos en 2
+
+- Entrenamiento
+- Test
+
+Para el deep learning y buena practica de machine learning es mejor divirlos en 3
+
+- Entrenamiento
+
+- Validacion
+  Con el test de validacion se nos da la oportunidad de cambiar hiperparametros para mejorar como puede ser el learning rate, numero de epochs, etc..
+
+- Test
+  Con el test ya se usa al final para evaluar como es el comportamiento de mi modelo
+  Testear el resultado final accuracy o unidad de medida que se utilice
+
+¿Por qué hacer esto?
+por cuestiones de etica para que el modelo se ponga a prueba con datos que jamas allá visto
+
+### Notas alumnos
+
+Racismo por IA:
+Como dijo el profesor anteriormente, han existido diversos dilemas éticos a lo largo de la historia reciente en los que se describe cómo la Inteligencia Artificial puede tener y ha tenido diversos sesgos que pueden convertir a sus resultados en lo que en un humano pasarían por ser racistas o discriminatorios de alguna forma.
+
+El problema es que estos sesgos, al no poder evaluar detalladamente los ingenieros de software el funcionamiento interno de estos modelos de redes neuronales, no pueden corregirse y pasan desapercibidos.
+
+Un ejemplo:
+
+En un banco, se solicita a un ingeniero de software que haga un modelo que prediga mediante deep learning qué tan probable es recibir beneficios en el banco de otorgar un préstamo a una persona.
+
+Este algoritmo tomaría en cuenta el nivel socioeconómico históricamente inferior de las personas afroamericanas y africanas y decide que tener esta procedencia o raza es una variable de peso que descarta (o hace menos probable) que a esa persona se le otorgue un préstamo.
+
+Esto es un problema, porque el algoritmo no se equivocó, los datos en los que se fundamenta son históricamente reales, sin embargo, es injusto que el banco aplique sistemáticamente esta postura puesto que ello perpetuará esta condición de pobreza o nivel socioeconómico medio-bajo en estas personas (al no recibir tener préstamos fácilmente, no tendrán tantas alternativas para salvar sus negocios y empresas y tenderán más a la bancarrota, etc.).
+
+Es por eso que se ha pensado en prohibir el uso de estos modelos de funcionamiento de caja negra en la toma de cierto tipo de decisiones que podrían resultar en este tipo de conflictos, además que se continúan buscando mecanismos efectivos que puedan tomar en cuenta y corregir este tipo de dilemas éticos.
