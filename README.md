@@ -296,3 +296,5 @@ Este algoritmo tomaría en cuenta el nivel socioeconómico históricamente infer
 Esto es un problema, porque el algoritmo no se equivocó, los datos en los que se fundamenta son históricamente reales, sin embargo, es injusto que el banco aplique sistemáticamente esta postura puesto que ello perpetuará esta condición de pobreza o nivel socioeconómico medio-bajo en estas personas (al no recibir tener préstamos fácilmente, no tendrán tantas alternativas para salvar sus negocios y empresas y tenderán más a la bancarrota, etc.).
 
 Es por eso que se ha pensado en prohibir el uso de estos modelos de funcionamiento de caja negra en la toma de cierto tipo de decisiones que podrían resultar en este tipo de conflictos, además que se continúan buscando mecanismos efectivos que puedan tomar en cuenta y corregir este tipo de dilemas éticos.
+
+## Resolviendo un problema de clasificacion binaria
