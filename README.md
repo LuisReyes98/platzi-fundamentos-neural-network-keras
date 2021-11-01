@@ -298,3 +298,5 @@ Esto es un problema, porque el algoritmo no se equivocó, los datos en los que s
 Es por eso que se ha pensado en prohibir el uso de estos modelos de funcionamiento de caja negra en la toma de cierto tipo de decisiones que podrían resultar en este tipo de conflictos, además que se continúan buscando mecanismos efectivos que puedan tomar en cuenta y corregir este tipo de dilemas éticos.
 
 ## Resolviendo un problema de clasificacion binaria
+
+## Entrenamiento del modelo de clasificación binaria
