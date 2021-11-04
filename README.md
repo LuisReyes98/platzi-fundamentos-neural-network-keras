@@ -302,3 +302,5 @@ Es por eso que se ha pensado en prohibir el uso de estos modelos de funcionamien
 ## Entrenamiento del modelo de clasificación binaria
 
 ## Regularización - Dropout
+
+## Reduciendo el overfitting
