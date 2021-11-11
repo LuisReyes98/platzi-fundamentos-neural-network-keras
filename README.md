@@ -307,3 +307,20 @@ Es por eso que se ha pensado en prohibir el uso de estos modelos de funcionamien
 
 ## Resolviendo un problema de regresión
 
+## ¿Qué sigue por aprender de redes neuronales?
+
+que funcion deberia utilizar en mi ultima capa dependiendo del problema
+
+![Ultima capa](./assets/ultima_capa.png)
+
+Mas por aprender
+
+- CNN (Convulutional neural network)
+- NPL (Natural language process)
+- Sequences
+- Hyper parameters tuning
+- Gans (Generative adversarial networks)
+- LSTM (Long short-term memory)
+- Callbacks
+- Tensorboard
+- Y un mundo mas de posibilidades
