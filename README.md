@@ -324,3 +324,5 @@ Mas por aprender
 - Callbacks
 - Tensorboard
 - Y un mundo mas de posibilidades
+
+[Deep Learning: Which Loss and Activation Functions should I use?](https://towardsdatascience.com/deep-learning-which-loss-and-activation-functions-should-i-use-ac02f1c56aa8)
