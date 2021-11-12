@@ -303,6 +303,57 @@ Es por eso que se ha pensado en prohibir el uso de estos modelos de funcionamien
 
 ## Regularización - Dropout
 
+Overfitting es un problema que ocurre cuando el modelo se aprende de memoria los datos en lugar de aprender acerca del problema que se le presenta
+
+Una red neuronal puede llegar a overfitting porque cada neurona se vuelve más especifica con los datos
+
+Una de las formas más sencillas de reducir el overfitting es usando un modelo más pequeño.
+
+Esto es si tenemos una red **demasiado compleja** con demasiados parámetros se apegará demasiado a estos datos haciendo **overfitting**
+
+Y si tenemos una red **demasiado sencilla** llegaría a **underfitting** porque no lograría adaptarse al problema siendo tan pequeña
+
+**no existe receta de cocina** para evitar el underfitting y el overfitting, ni para saber cuántas capas debería tener mi red ni cuantas neuronas debería tener cada capa, aun así, una técnica es empezar con un modelo muy pequeño y una vez cómo se comporta iterar
+
+### Regularización
+
+viene de un problema de hacer los datos más regulares
+
+Occam's Razor "When faced with two equally good hypothesis, always choose the simpler one."
+
+Reducir la complejidad del modelo, para hacer esto debemos reducir los pesos que arroja nuestra red al entrenar, la regularización se lograr con una fórmula matemática
+
+en la cual la regularización castiga la función de perdida utilizando el valor absoluto del peso o el peso al cuadrado multiplicado por un delta
+
+https://compgenomr.github.io/book/logistic-regression-and-regularization.html
+
+https://medium.com/analytics-vidhya/l1-vs-l2-regularization-which-is-better-d01068e6658c
+
+http://laid.delanover.com/difference-between-l1-and-l2-regularization-implementation-and-visualization-in-tensorflow/
+
+L1
+$$
+\text{cost} = \sum_{i=0}^N (y_i - \sum_{j=0}^M (x_{ij}W_j)^2 + \lambda \sum_{j=0}^M | W_j|)
+$$
+
+L2
+$$
+\text{cost} = \sum_{i=0}^N (y_i - \sum_{j=0}^M (x_{ij}W_j)^2 + \lambda \sum_{j=0}^M W_j^2)
+$$
+
+aquí siendo el valor decisivo lambda $\lambda$ que mientras mayor su valor mayor el efecto de la regularización sobre la función de perdida.
+
+### Dropout
+
+Otra técnica para reducir el overfitting es el Dropout
+
+la universidad que planteo esto tuvo la idea haciendo fila en un banco y viendo que cada cierta cantidad de personas de la fila avanzaban los cajeros cambiaban de lugar internamente de forma aleatoria
+Esto lo hacen para evitar que una persona que haga fila para ver un cajero reducir la posibilidad de atender alguien que conozca y que estén conspirando o tenga la intención de hacer algún fraude.
+
+entonces pensaron que tal si mis redes neuronales están conspirando entre si con los valores de entrada, entonces qué tal si muevo mis valores de entrada para que la conspiración no sea tan alta
+
+el dropout consiste durante cada una de las épocas apagar ciertas neuronas de forma aleatoria para reducir el exceso de exactitud que ocasiona el overfitting
+
 ## Reduciendo el overfitting
 
 ## Resolviendo un problema de regresión
