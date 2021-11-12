@@ -136,6 +136,10 @@ Tipos de funciones de activación:
 
 [Herramienta para la ciencia de datos y funciones de activación](https://www.wolframalpha.com/)
 
+![Activacion functions](./assets/Various-forms-of-non-linear-activation-functions.png)
+
+![softmax](./assets/softmax-activation-function.jpg)
+
 ## Función de pérdida (loss function)
 
 La función de pérdida es muy importante definirla
@@ -377,3 +381,17 @@ Mas por aprender
 - Y un mundo mas de posibilidades
 
 [Deep Learning: Which Loss and Activation Functions should I use?](https://towardsdatascience.com/deep-learning-which-loss-and-activation-functions-should-i-use-ac02f1c56aa8)
+
+## repasando
+
+¿Qué función de activación en la última capa es recomendable para un problema de regresión?
+
+https://platzi.com/clases/2263-redes-neuronales/37456-resolviendo-un-problema-de-regresion/
+
+Es una función de activación muy útil que también cuenta con derivada y funciona perfecto cuando queremos resolver un problema de probabilidad binaria:
+
+https://platzi.com/clases/2263-redes-neuronales/37439-funciones-de-activacion/
+
+¿Cuál es la función del BIAS en la neurona?
+
+https://platzi.com/clases/2263-redes-neuronales/37437-la-neurona-una-pequena-y-poderosa-herramienta/
